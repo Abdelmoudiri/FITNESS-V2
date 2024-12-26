@@ -5,6 +5,7 @@ class Member extends User{
     {
         parent::__construct($nom,$prenom,$email,$telephone,$password);
         $this->role = 'member';
+        
     }
     
 }
