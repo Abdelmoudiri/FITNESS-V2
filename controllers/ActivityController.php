@@ -1,5 +1,5 @@
 <?php
-include "../models/Activity.php";
+include_once "../models/Activity.php";
 
 class ActivityController {
 

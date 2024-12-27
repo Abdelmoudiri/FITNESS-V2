@@ -1,7 +1,7 @@
 <?php
 
 
-include "../config/database.php";
+include_once "../config/database.php";
 
 class Activity {
     private $id_activity;

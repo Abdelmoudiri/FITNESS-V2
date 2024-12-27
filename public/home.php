@@ -77,6 +77,7 @@
             </div>
         <?php endif; ?>
         <div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
+             <!-- --------------------------------Formulaire de connexion début------------------------------------------------------------------ -->
             <div class="w-full max-w-xl">
                 <h3 class="text-2xl font-bold mb-6 text-rose-900 text-center">Connexion</h3>
                 <form action="#" method="post" class="space-y-4">
@@ -91,6 +92,7 @@
                     <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded">Se connecter</button>
                 </form>
             </div>
+             <!-- --------------------------------Formulaire de connexion fin------------------------------------------------------------------ -->
             <div class="hidden md:block w-px bg-rose-300 h-96"></div>
             <div class="w-full md:hidden h-px bg-rose-300"></div>
             <div class="w-full max-w-xl">

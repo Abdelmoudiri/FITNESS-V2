@@ -1,5 +1,5 @@
 <?php
-include "../config/database.php";
+include_once "../config/database.php";
 class User {
     protected $nom;
     protected $prenom;
@@ -17,7 +17,7 @@ class User {
     }
 
     public function login($email, $password){
-        $db = DatabaseConnection::getInstance(); // Obtenir l'instance unique
+        $db = DatabaseConnection::getInstance();
         $conn = $db->getConnection();
         
         $stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
@@ -37,8 +37,8 @@ class User {
     }
 
     public function updateInformations($id_user,$telephone, $password){
-        $db = DatabaseConnection::getInstance();
-        $conn = $db->getConnection();
+        // $db = DatabaseConnection::getInstance();
+        // $conn = $db->getConnection();
 
         $stmt = $conn->prepare("UPDATE user SET telephone = ?, password = ? WHERE id = ?");
         try {
@@ -49,8 +49,8 @@ class User {
     }
 
     public function annulerReservation($id_reservation){
-        $db = DatabaseConnection::getInstance(); // Obtenir l'instance unique
-        $conn = $db->getConnection();
+        // $db = DatabaseConnection::getInstance(); // Obtenir l'instance unique
+        // $conn = $db->getConnection();
 
         $stmt = $conn->prepare("UPDATE reservations SET statut = 'Annulee' WHERE id_reservation = ?");
         $stmt->execute([$id_reservation]);
