@@ -26,6 +26,7 @@ class ActivityController {
        $result =  Activity::getAllActivity();
         require_once("../public/home.php");
     }
+    
 
     public function deleteActivity($id_activity) {
         return Activity::deleteActivity($id_activity);
