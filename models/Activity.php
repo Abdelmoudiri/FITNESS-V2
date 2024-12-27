@@ -43,13 +43,14 @@ class Activity {
         $stmt->execute([$id_activity]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+  
     public static function getAllActivity() {
         $db = DatabaseConnection::getInstance();
         $conn = $db->getConnection();
-
-        $stmt = $conn->prepare("SELECT * FROM activities ");
+    
+        $stmt = $conn->prepare("SELECT * FROM activities");
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function updateActivity($id_activity) {
