@@ -37,13 +37,13 @@ class Admin extends User {
         }
     }
 
-    public function updateActivity($nom_Activite, $description, $capacite, $date_debut, $date_fin){
+    public function updateActivity($id_Activite, $nom_Activite, $description, $capacite, $date_debut, $date_fin){
         $db = DatabaseConnection::getInstance();
         $conn = $db->getConnection();
 
-        $stmt = $conn->prepare("UPDATE activities SET nom_Activite = ?, description = ?, capacite = ?, date_debut= ?, date_fin= ?");
+        $stmt = $conn->prepare("UPDATE activities SET nom_Activite = ?, description = ?, capacite = ?, date_debut= ?, date_fin= ? WHERE id_activity = ?");
         try {
-            $stmt->execute([$nom_Activite, $description, $capacite, $date_debut, $date_fin]);
+            $stmt->execute([$nom_Activite, $description, $capacite, $date_debut, $date_fin, $id_Activite]);
         } catch (PDOException $e) {
             echo "Erreur lors de la mise à jour : " . $e->getMessage();
         }
@@ -70,42 +70,7 @@ class Admin extends User {
         } catch (PDOException $e) {
             echo "Erreur lors de la mise à jour : " . $e->getMessage();
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------------------------------------------
 }
-$userr = new User("ty","mohamed","yyy@gmail.com","0666666666","dadssi");
-
-$showw=$userr->login("yyy@gmail.com","dadssi");
-
-echo $showw;
-
-
-
-
-
-
-
 ?>
 
