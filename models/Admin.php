@@ -1,5 +1,6 @@
 <?php
 include_once "../config/database.php";
+include_once "../models/User.php";
 
 class Admin extends User {
     
