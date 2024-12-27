@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer>
         // Logique JS pour gérer les onglets
+
         function switchTab(tabId) {
             const tabs = document.querySelectorAll("[data-tab-content]");
             tabs.forEach(tab => {
