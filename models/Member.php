@@ -5,12 +5,25 @@ class Member extends User{
     {
         parent::__construct($nom,$prenom,$email,$telephone,$password);
         $this->role = 'member';
-        
+    }
+
+    public function reserver(){
+
+    }
+
+    public function (){
+
     }
     
+
+    public function reserver(){
+
+    }
+
+    public function reserver(){
+
+    }
 }
 
 
 ?>
-$m = new Member("a","a","e","a","a");
-
