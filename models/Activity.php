@@ -20,6 +20,7 @@ class Activity {
         $this->date_fin = $date_fin;
         $this->est_disponible = $est_disponible;
     }
+   
 
     public function createActivity() {
         $db = DatabaseConnection::getInstance();
@@ -40,6 +41,14 @@ class Activity {
 
         $stmt = $conn->prepare("SELECT * FROM activities WHERE id_activity = ?");
         $stmt->execute([$id_activity]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    public static function getAllActivity() {
+        $db = DatabaseConnection::getInstance();
+        $conn = $db->getConnection();
+
+        $stmt = $conn->prepare("SELECT * FROM activities ");
+        $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
