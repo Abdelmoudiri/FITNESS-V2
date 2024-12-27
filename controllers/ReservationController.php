@@ -1,5 +1,5 @@
 <?php
-include "../models/Reservation.php";
+include_once "../models/Reservation.php";
 
 class ReservationController {
 
