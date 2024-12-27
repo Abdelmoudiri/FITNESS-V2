@@ -91,9 +91,6 @@ class Admin extends User {
 
 
 
-
-
-
 // ---------------------------------------------------------
 }
 $userr = new User("ty","mohamed","yyy@gmail.com","0666666666","dadssi");
