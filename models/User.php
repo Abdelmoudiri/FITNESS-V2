@@ -20,7 +20,9 @@ class User {
         $db = DatabaseConnection::getInstance(); // Obtenir l'instance unique
         $conn = $db->getConnection();
         
-       
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
         
         // à diviser sur 2
         if ($user && $password= $user['password']) {
@@ -80,12 +82,4 @@ $userr = new User("ty","mohamed","yyy@gmail.com","0666666666","dadssi");
 $showw=$userr->login("yyy@gmail.com","dadssi");
 
 echo $showw;
-
-
-
-
-
-
-
 ?>
-

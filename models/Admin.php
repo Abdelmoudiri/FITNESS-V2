@@ -59,6 +59,7 @@ class Admin extends User {
         } catch (PDOException $e) {
             echo "Erreur lors de la suppression : " . $e->getMessage();
         }
+    }
 
     public function manageReservations($id_reservation, $statut){
         $db = DatabaseConnection::getInstance();
@@ -108,4 +109,3 @@ echo $showw;
 
 
 ?>
-
