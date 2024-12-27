@@ -36,6 +36,18 @@ class User {
         return "Vous n'êtes pas inscrit !";
     }
 
+    public function updateInformations($id_user,$telephone, $password){
+        $db = DatabaseConnection::getInstance();
+        $conn = $db->getConnection();
+
+        $stmt = $conn->prepare("UPDATE user SET telephone = ?, password = ? WHERE id = ?");
+        try {
+            $stmt->execute([$telephone, $password, $id_user]);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la mise à jour : " . $e->getMessage();
+        }
+    }
+
     public function annulerReservation($id_reservation){
         $db = DatabaseConnection::getInstance(); // Obtenir l'instance unique
         $conn = $db->getConnection();
