@@ -49,7 +49,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <?php foreach ($result as $res): ?>
                 <div class="relative group p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 bg-rose-500">
-                    <img src="../files/activites_sportives.png" alt="<?= htmlspecialchars($res['nom_activite']) ?>" class="w-full rounded-lg">
+                    <img src="assets/images/activites_sportives.png" alt="<?= htmlspecialchars($res['nom_activite']) ?>" class="w-full rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 mt-4 text-white"><?= htmlspecialchars($res['nom_activite']) ?></h3>
                     <p class="text-white"><?= htmlspecialchars($res['description']) ?></p>
                     <hr class="mt-4 mb-4">
