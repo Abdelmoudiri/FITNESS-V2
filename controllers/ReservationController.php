@@ -35,15 +35,5 @@ class ReservationController {
     }
 }
 
-$reservationController = new ReservationController();
 
-echo $reservationController->createReservation(1, 2);
-
-print_r($reservationController->getReservationById(1));
-
-print_r($reservationController->getReservationsByUser(1));
-
-echo $reservationController->updateReservationStatus(1, 'Confirmee');
-
-echo $reservationController->deleteReservation(1);
 ?>

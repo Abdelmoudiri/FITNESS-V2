@@ -36,17 +36,4 @@ class ActivityController {
         return Activity::isAvailable($id_activity) ? "Activité disponible." : "Activité non disponible.";
     }
 }
-
-
-// $activityController = new ActivityController();
-
-// echo $activityController->createActivity("Yoga", "Cours de yoga pour débutants", 20, "2025-01-01", "2025-02-01");
-
-// print_r($activityController->getActivityById(1));
-
-// echo $activityController->updateActivity(1, "Yoga Avancé", "Cours pour niveaux avancés", 15, "2025-02-01", "2025-03-01", true);
-
-// echo $activityController->deleteActivity(1);
-
-// echo $activityController->isActivityAvailable(2);
 ?>
