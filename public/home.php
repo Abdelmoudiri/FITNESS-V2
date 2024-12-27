@@ -44,25 +44,25 @@
     </section>
     <!-- ----------------------------------------------------------------------------------------------------------------- -->
     <section id="all-activities" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-rose-900">Nos Activités :</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <?php foreach ($result as $res): ?>
-                    <div class="relative group p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 bg-purple-300">
-                        <img src="" alt="<?= htmlspecialchars($res['nom_activite']) ?>" class="w-full rounded-lg">
-                        <h3 class="text-xl font-semibold mb-4 mt-4 text-purple-700"><?= htmlspecialchars($res['nom_activite']) ?></h3>
-                        <p class="text-gray-600"><?= htmlspecialchars($res['description']) ?></p>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg">
-                            <a href="#es-<?= htmlspecialchars($es['id_activite']) ?>" class="bg-white text-purple-700 font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-purple-700 hover:text-white transition-colors">
-                                Voir détails
-                            </a>
-                        </div>
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8 text-rose-900">Nos Activités :</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <?php foreach ($result as $res): ?>
+                <div class="relative group p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 bg-purple-300">
+                    <img src="" alt="<?= htmlspecialchars($res['nom_activite']) ?>" class="w-full rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4 mt-4 text-purple-700"><?= htmlspecialchars($res['nom_activite']) ?></h3>
+                    <p class="text-gray-600"><?= htmlspecialchars($res['description']) ?></p>
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg">
+                        <a href="#<?= htmlspecialchars($res['id_activity']) ?>" class="bg-white text-purple-700 font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-purple-700 hover:text-white transition-colors">
+                            Voir détails
+                        </a>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-    </section>
+    </div>
+</section>
+
      <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
      <section id="reservation" class="py-16 bg-rose-200">
     <div class="max-w-7xl mx-auto px-4">
