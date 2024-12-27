@@ -91,3 +91,9 @@ echo $showw;
 
 ?>
 
+        $this -> email = $email;
+        $this -> password = $password;
+    }
+}
+// ---------------------------------------------------------
+?>
