@@ -21,6 +21,7 @@ class ActivityController {
         $activity = new Activity($nom_activite, $description, $capacite, $date_debut, $date_fin, $est_disponible);
         return $activity->updateActivity($id_activity);
     }
+    
     public function getAllActivities() {
        $result =  Activity::getAllActivity();
         require_once("../public/home.php");
