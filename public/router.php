@@ -1,8 +1,9 @@
 <?php
 
-include_once "User.php";
-include_once "Member.php";
-include_once "Admin.php";
+include_once "../models/Admin.php";
+include_once "../models/Reservation.php";
+include_once "../models/Activity.php";
+include_once "../models/Member.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
