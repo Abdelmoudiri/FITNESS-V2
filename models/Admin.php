@@ -71,38 +71,8 @@ class Admin extends User {
         } catch (PDOException $e) {
             echo "Erreur lors de la mise à jour : " . $e->getMessage();
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------------------------------------------
 }
-$userr = new User("ty","mohamed","yyy@gmail.com","0666666666","dadssi");
-
-$showw=$userr->login("yyy@gmail.com","dadssi");
-
-echo $showw;
-
-
-
-
-
-
 
 ?>
+
